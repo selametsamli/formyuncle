@@ -38,6 +38,8 @@ class Post(models.Model):
     image = models.ImageField(verbose_name='Resim', upload_to=upload_to,
                               null=True, help_text='Kapak Fotoğrafı Yükleyiniz', blank=True)
 
+    videofile = models.FileField(upload_to='videos/', null=True, verbose_name="video")
+
     class Meta:
         verbose_name = 'Gönderi'
         verbose_name_plural = 'Gönderiler'

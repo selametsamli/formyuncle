@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12db335b-adc5-44a0-922d-a17f25d2e80f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/posts/decorator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auths/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/auths/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/formyuncle/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/formyuncle/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/posts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/posts/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/posts/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/posts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/auths/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/auths/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/auths/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/auths/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base_is_anonymous.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base_is_anonymous.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/posts/post-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/posts/post-detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/posts/post-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/posts/post-list.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/posts/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="364">
-              <caret line="51" column="21" lean-forward="true" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+              <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -67,8 +58,29 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/posts/post-detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="56" column="48" selection-start-line="56" selection-start-column="48" selection-end-line="56" selection-end-column="48" />
+            <state relative-caret-position="381">
+              <caret line="46" column="26" lean-forward="true" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/formyuncle/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="64" column="59" selection-start-line="64" selection-start-column="59" selection-end-line="64" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/formyuncle/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="343">
+              <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+              <folding>
+                <element signature="e#634#666#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,8 +100,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/posts/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="83" selection-start-line="83" selection-end-line="83" />
+            <state relative-caret-position="386">
+              <caret line="40" column="84" selection-start-line="40" selection-start-column="84" selection-end-line="40" selection-end-column="84" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -114,6 +126,8 @@
       <find>add</find>
       <find>pro</find>
       <find>user</find>
+      <find>yorum</find>
+      <find>options</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -124,7 +138,6 @@
       <list>
         <option value="$PROJECT_DIR$/templates/posts/sa.html" />
         <option value="$PROJECT_DIR$/posts/admin.py" />
-        <option value="$PROJECT_DIR$/formyuncle/settings.py" />
         <option value="$PROJECT_DIR$/auths/forms.py" />
         <option value="$PROJECT_DIR$/auths/tests.py" />
         <option value="$PROJECT_DIR$/auths/models.py" />
@@ -136,7 +149,6 @@
         <option value="$PROJECT_DIR$/auths/urls.py" />
         <option value="$PROJECT_DIR$/templates/auths/profile/include/both_navbar_fields.html" />
         <option value="$PROJECT_DIR$/posts/urls.py" />
-        <option value="$PROJECT_DIR$/posts/models.py" />
         <option value="$PROJECT_DIR$/templates/auths/login.html" />
         <option value="$PROJECT_DIR$/templates/posts/post-list.html" />
         <option value="$PROJECT_DIR$/templates/base_is_anonymous.html" />
@@ -144,6 +156,8 @@
         <option value="$PROJECT_DIR$/templates/auths/register.html" />
         <option value="$PROJECT_DIR$/auths/views.py" />
         <option value="$PROJECT_DIR$/posts/views.py" />
+        <option value="$PROJECT_DIR$/formyuncle/settings.py" />
+        <option value="$PROJECT_DIR$/posts/models.py" />
         <option value="$PROJECT_DIR$/templates/posts/post-detail.html" />
       </list>
     </option>
@@ -170,22 +184,17 @@
             <path>
               <item name="formyuncle" type="b2602c69:ProjectViewProjectNode" />
               <item name="formyuncle" type="462c0819:PsiDirectoryNode" />
-              <item name="auths" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="formyuncle" type="b2602c69:ProjectViewProjectNode" />
               <item name="formyuncle" type="462c0819:PsiDirectoryNode" />
-              <item name="posts" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+              <item name="videos" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="formyuncle" type="b2602c69:ProjectViewProjectNode" />
               <item name="formyuncle" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="formyuncle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="formyuncle" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="posts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -263,12 +272,12 @@
       <option name="presentableId" value="Default" />
       <updated>1555925790541</updated>
       <workItem from="1555925794300" duration="292000" />
-      <workItem from="1555926245654" duration="14342000" />
+      <workItem from="1555926245654" duration="15450000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14634000" />
+    <option name="totallyTimeSpent" value="15742000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -370,23 +379,6 @@
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/formyuncle/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
-          <folding>
-            <element signature="e#634#666#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/formyuncle/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="38" column="10" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -521,19 +513,9 @@
     <entry file="file://$PROJECT_DIR$/posts/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
-          <caret line="51" column="21" lean-forward="true" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+          <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/posts/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="83" selection-start-line="83" selection-end-line="83" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -548,10 +530,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/formyuncle/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="64" column="59" selection-start-line="64" selection-start-column="59" selection-end-line="64" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/formyuncle/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+          <folding>
+            <element signature="e#634#666#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/posts/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="40" column="84" selection-start-line="40" selection-start-column="84" selection-end-line="40" selection-end-column="84" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/posts/post-detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="56" column="48" selection-start-line="56" selection-start-column="48" selection-end-line="56" selection-end-column="48" />
+        <state relative-caret-position="381">
+          <caret line="46" column="26" lean-forward="true" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
         </state>
       </provider>
     </entry>

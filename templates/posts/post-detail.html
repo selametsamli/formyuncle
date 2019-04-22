@@ -36,6 +36,11 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <p class="lead"> {{ blog.content|linebreaksbr }}</p>
+                        <video width='720' height="480" controls>
+                            <source src='{{ blog.videofile }}' type='video/mp4'>
+                        </video>
+
+
                         <p class="lead">
                             Kategoriler: {{ blog.kategoriler.all|join:',' }}
                         </p>
