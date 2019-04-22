@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="12db335b-adc5-44a0-922d-a17f25d2e80f" name="Default Changelist" comment="" />
+    <list default="true" id="12db335b-adc5-44a0-922d-a17f25d2e80f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/formyuncle/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/formyuncle/settings.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/formyuncle/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="105" column="22" selection-start-line="105" selection-start-column="20" selection-end-line="105" selection-end-column="22" />
+            <state relative-caret-position="880">
+              <caret line="92" column="6" lean-forward="true" selection-start-line="92" selection-start-column="6" selection-end-line="92" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -26,6 +28,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/formyuncle/settings.py" />
+      </list>
+    </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1280" />
@@ -41,11 +50,6 @@
           <expand>
             <path>
               <item name="formyuncle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="formyuncle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="formyuncle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="formyuncle" type="462c0819:PsiDirectoryNode" />
               <item name="formyuncle" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -110,15 +114,16 @@
       <option name="presentableId" value="Default" />
       <updated>1555925790541</updated>
       <workItem from="1555925794300" duration="292000" />
-      <workItem from="1555926245654" duration="45000" />
+      <workItem from="1555926245654" duration="485000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="337000" />
+    <option name="totallyTimeSpent" value="777000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2180937" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -134,7 +139,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.24931507" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -149,8 +154,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/formyuncle/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="105" column="22" selection-start-line="105" selection-start-column="20" selection-end-line="105" selection-end-column="22" />
+        <state relative-caret-position="880">
+          <caret line="92" column="6" lean-forward="true" selection-start-line="92" selection-start-column="6" selection-end-line="92" selection-end-column="6" />
         </state>
       </provider>
     </entry>
