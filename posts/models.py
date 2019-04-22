@@ -4,6 +4,7 @@ from uuid import uuid4
 from django.shortcuts import reverse
 from django.template.defaultfilters import slugify, safe
 from unidecode import unidecode
+from django.contrib.auth.models import User
 
 
 def upload_to(instance, filename):
@@ -43,7 +44,7 @@ class Post(models.Model):
         ordering = ['-id']
 
     def __str__(self):
-        return '{} '.format(self.title)#, self.user)
+        return '{} '.format(self.title)  # , self.user)
 
     def get_absolute_url(self):
         return reverse('post-detail', kwargs={'slug': self.slug})
@@ -68,3 +69,33 @@ class Post(models.Model):
                 self.slug = self.get_unique_slug()
 
         super(Post, self).save(*args, **kwargs)
+
+    def get_image(self):
+        if self.image:
+            return self.image.url
+        else:
+            return '/media/default/marijuana.jpg'
+
+    def get_blog_comment(self):
+        return self.comment.all()
+
+    def get_blog_comment_count(self):
+        return len(self.get_blog_comment())  # Yorum sayısını döndürür.
+
+
+class Comment(models.Model):
+    user = models.ForeignKey(User, null=True, default=1, related_name='comment', on_delete=True)
+    blog = models.ForeignKey(Post, null=True, on_delete=True, related_name='comment')
+    content = models.TextField(verbose_name='Yorum', max_length=1000, blank=False, null=True)
+    comment_time = models.DateTimeField(auto_now_add=True, null=True)
+
+    class Meta:
+        verbose_name_plural = 'Yorumlar'
+
+    def __str__(self):
+        return "{} {}".format(self.user, self.blog)
+
+    def get_screen_name(self):
+        if self.user.first_name:
+            return "{}".format(self.user.get_full_name())
+        return self.user.username

@@ -2,11 +2,10 @@ from django.shortcuts import render
 from django.contrib import messages
 from django.http import HttpResponseBadRequest, HttpResponseForbidden
 from django.shortcuts import render, HttpResponse, get_object_or_404, HttpResponseRedirect, reverse
-from .forms import PostForm as BlogForm
+from .forms import PostForm as BlogForm, CommentForm
 from .models import Post
 from django.db.models import Q
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-
 
 
 # Create your views here.
@@ -16,8 +15,7 @@ def post_list(request):
     posts = Post.objects.all()
     page = request.GET.get('page', 1)
 
-
-    paginator = Paginator(posts, 3)
+    paginator = Paginator(posts, 6)
     try:
         posts = paginator.page(page)
     except EmptyPage:
@@ -27,6 +25,7 @@ def post_list(request):
 
     context = {'posts': posts}
     return render(request, 'posts/post-list.html', context)
+
 
 def post_create(request):
     form = BlogForm()
@@ -45,7 +44,7 @@ def post_create(request):
 
 
 def post_detail(request, slug):
-    form = ''  # CommentForm()
+    form = CommentForm()
     blog = get_object_or_404(Post, slug=slug)
     # print(blog.get_blog_comment())
 
@@ -66,3 +65,15 @@ def post_update(request, slug):
     context = {'form': form, 'blog': blog}
 
     return render(request, 'posts/post-update.html', context)
+
+
+def add_comment(request, slug):
+    blog = get_object_or_404(Post, slug=slug)
+    form = CommentForm(data=request.POST)
+    if form.is_valid():
+        new_comment = form.save(commit=False)
+        new_comment.blog = blog
+        new_comment.user = request.user
+        new_comment.save()
+        messages.success(request, 'Tebrikler yorumunuz başarı ile oluşturuldu')
+        return HttpResponseRedirect(blog.get_absolute_url())

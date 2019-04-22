@@ -41,14 +41,14 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href='#'>Anasayfa <span class="sr-only">(current)</span></a>
+                <li class="active"><a href='{% url 'post-list' %}'>Anasayfa <span class="sr-only">(current)</span></a>
                 </li>
                 <li><a href="#">Link</a></li>
 
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"> <span class="glyphicon glyphicon-plus"></span>Post Oluştur </a>
+                <li><a href="{% url 'post-create' %}"> <span class="glyphicon glyphicon-plus"></span>Post Oluştur </a>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"

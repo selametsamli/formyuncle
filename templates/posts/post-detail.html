@@ -72,7 +72,7 @@
                     </div>
                 </div>
                 <div class="row" style="margin-top: 50px;">
-                    <form action="#" method="post">
+                    <form action="{% url 'add-comment' blog.slug %}" method="post">
                         {% csrf_token %}
                         {{ form.media }}
                         {% for field in form %}

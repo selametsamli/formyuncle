@@ -13,37 +13,10 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="col-lg-8 col-lg-offset-2">
-
-                <div class="row">
-                    <div class="col-lg-12">
-                        {{ request.user }}
-                        <form class="form-inline" action="{% url 'post-list' %}">
-
-                            {% for foo in form %}
-                                <div class="form-group">
-                                    {{ foo }}
-                                    {% for error in foo.errors %}
-                                        <span class="text-danger"><b>{{ error }}</b></span>
-                                    {% endfor %}
-                                </div>
-
-                            {% endfor %}
-
-                            <input type="submit" class="btn btn-success" value="Sorgula">
-
-                        </form>
-                    </div>
-                </div>
-
-
                 {% for post in posts %}
                     <div class="post">
                         <h3><a href="{% url 'post-detail' post.slug %}"> {{ post.title }}</a>
                             {{ post.get_yayin_taslak_html }}
-                            <a href="#"
-                               class="add-favorite-button btn btnsm btn-default">
-                                <span class="glyphicon glyphicon-star "></span>
-                            </a>
                             <small style="font-size:small"><span
                                     class="glyphicon glyphicon-time"></span> {{ post.created_date }}</small>
                         </h3>
@@ -59,11 +32,7 @@
                     <span class="glyphicon glyphicon-comment"><b
                             class="post-comment-count">{{ post.get_comment_count }}</b></span>
                         </span>
-                            <span url="#" class="post-favorite-span"
-                                  title="Favori Sayısı">
-                    <span class="glyphicon glyphicon-star active"><b
-                            class="post-favorite-count"></b></span>
-                          </span>
+
                         </p>
                         <p style="margin-top: 20px;"> {{ post.content|linebreaksbr|truncatechars:250 }}</p>
                     </div>
@@ -83,6 +52,7 @@
                             <ul class="pagination">
                                 {% if posts.has_previous %}
                                     <li><a href="?page=
+
 
 
 
@@ -137,6 +107,7 @@
 
 
 
+
                                                 {{ i }}{% if request.GET.taslak_yayin %}&taslak_yayin={{ request.GET.taslak_yayin }}{% endif %}{% if request.GET.search %}&search={{ request.GET.search }}{% endif %}">{{ i }}</a>
                                         </li>
                                     {% endif %}
@@ -144,6 +115,7 @@
 
                                 {% if posts.has_next %}
                                     <li><a href="?page=
+
 
 
 
