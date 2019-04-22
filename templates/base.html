@@ -48,11 +48,11 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"> <span class="glyphicon glyphicon-plus"></span>Post Create </a>
+                <li><a href="#"> <span class="glyphicon glyphicon-plus"></span>Post Oluştur </a>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false">{{ request.user.userprofile.get_screen_name }}<span
+                       aria-expanded="false"><span
                             class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#"> <span
@@ -62,7 +62,7 @@
                         <li><a href="#"> <span class="glyphicon glyphicon-lock"></span>
                             Password Change</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-log-out"></span>
+                        <li><a href="{% url 'user-logout' %}"><span class="glyphicon glyphicon-log-out"></span>
                             Logout</a></li>
                     </ul>
                 </li>

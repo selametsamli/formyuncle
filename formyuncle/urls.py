@@ -24,7 +24,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('posts/', include('posts.urls')),
-    path('', post_list, name='post_list'),
+    path('auths/', include('auths.urls')),
+    path('', post_list, name='post-list'),
 
 ]
 
