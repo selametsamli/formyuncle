@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} {{ user.profile.get_screen_name }}{% endblock %}
+
+{% block ust_icerik %}
+
+    <style rel="stylesheet" type="text/css">
+    .modal-dialog{
+        overflow-y:initial !important;
+    }
+    .modal-body{
+        height: 280px;
+        overflow-y: auto;
+    }
+    </style>
+
+{% endblock %}
+
+
+{% block icerik %}
+    <div class="row">
+        <div class="col-lg-8 pull-center">
+
+            <div class="text-center">
+                <img class="img-circle user-profile" src="{{ user.userprofile.get_profile_photo }}">
+            </div>
+            <div class="text-center">
+                <br/>
+                {% if user.userprofile.user_full_name %}
+                    <span class="text"><b>{{ user.userprofile.user_full_name|upper }}</b></span>
+                    <br/>
+                {% endif %}
+                <span class="text">
+                    <b>@{{ user.username }}</b>
+                </span>
+                <span class="text">
+                    <br>
+                    <b>{{ user.userprofile.get_sex_display }}</b>
+                </span>
+            </div>
+
+
+
+            {% if request.user == user %}
+                {% include 'auths/profile/include/owner_navbar.html' %}
+
+            {% else %}
+                {% include 'auths/profile/include/visitor_navbar.html' %}
+            {% endif %}
+            <div>
+                <div>
+                    {% block profil_icerik %}
+                    {% endblock %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

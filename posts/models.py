@@ -27,7 +27,7 @@ class Kategori(models.Model):
 class Post(models.Model):
     title = models.CharField(max_length=100, blank=True, null=True, verbose_name='Başlık ',
                              help_text='Başlık bilgisi burada girilir.')
-    # user = models.ForeignKey(User, default=1, null=True, verbose_name='User', on_delete=True, related_name='blog')
+    user = models.ForeignKey(User, default=1, null=True, verbose_name='User', on_delete=True, related_name='blog')
 
     content = models.TextField(max_length=5000, verbose_name='İçerik', null=True, blank=False)
     created_date = models.DateField(auto_now_add=True, auto_now=False)
