@@ -84,7 +84,7 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
-    user = models.ForeignKey(User, null=True, default=1, related_name='comment', on_delete=True)
+    user = models.ForeignKey(User, null=True, default=1, related_name='user', on_delete=models.CASCADE)
     blog = models.ForeignKey(Post, null=True, on_delete=True, related_name='comment')
     content = models.TextField(verbose_name='Yorum', max_length=1000, blank=False, null=True)
     comment_time = models.DateTimeField(auto_now_add=True, null=True)

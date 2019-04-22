@@ -9,9 +9,10 @@
 
 {% block icerik %}
     <div class="row">
-        <div class="col-lg-5 pull-center">
-            <h2 class="page-header"> </h2>
+    <div class="col-lg-5 pull-center">
+        <h2 class="page-header"></h2>
 
+        {% if request.user.username == 'selametsamli' %}
 
             <form action="{% url 'register' %} " method="post">
                 {% csrf_token %}
@@ -37,6 +38,8 @@
                 <input type="submit" class="btn btn-sm btn-success pull-right" value="Kayıt Ol">
                 <span><b>Giriş Yapmak için <a href="{% url 'user-login' %}">  Tıklayınız </a></b></span>
             </form>
+        {% endif %}
+
         </h2>
     </div>
 {% endblock %}

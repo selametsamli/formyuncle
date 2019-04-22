@@ -1,15 +1,16 @@
 from django.shortcuts import render
 from django.contrib import messages
 from django.http import HttpResponseBadRequest, HttpResponseForbidden
-from django.shortcuts import render, HttpResponse, get_object_or_404, HttpResponseRedirect, reverse
+from django.shortcuts import render, HttpResponse, get_object_or_404, HttpResponseRedirect, reverse, Http404
 from .forms import PostForm as BlogForm, CommentForm
 from .models import Post
-from django.db.models import Q
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.contrib.auth.decorators import login_required
+from django.urls import reverse_lazy
+from .decorator import is_post
 
 
 # Create your views here.
-
 
 def post_list(request):
     posts = Post.objects.all()
@@ -27,22 +28,25 @@ def post_list(request):
     return render(request, 'posts/post-list.html', context)
 
 
+@login_required
 def post_create(request):
-    form = BlogForm()
-    if request.method == 'POST':
-        # print(request.POST)
-        form = BlogForm(data=request.POST, files=request.FILES)
-        if form.is_valid():
-            blog = form.save(commit=False)
-            blog.user = request.user
-            blog.save()
-            msg = 'Tebrikler <strong> %s </strong> isimli gönderiniz başarı ile oluşturuldu.' % (blog.title)
-            messages.success(request, msg, extra_tags='success')
+    if request.user.username == 'selametsamli' or request.user.username == 'hizirsamli':
+        form = BlogForm()
+        if request.method == 'POST':
+            # print(request.POST)
+            form = BlogForm(data=request.POST, files=request.FILES)
+            if form.is_valid():
+                blog = form.save(commit=False)
+                blog.user = request.user
+                blog.save()
+                msg = 'Tebrikler <strong> %s </strong> isimli gönderiniz başarı ile oluşturuldu.' % (blog.title)
+                messages.success(request, msg, extra_tags='success')
 
-            return HttpResponseRedirect(blog.get_absolute_url())  # post detail sayfasına yönlendirir.
-    return render(request, 'posts/post-create.html', context={'form': form})
+                return HttpResponseRedirect(blog.get_absolute_url())  # post detail sayfasına yönlendirir.
+        return render(request, 'posts/post-create.html', context={'form': form})
+    raise Http404
 
-
+@login_required(login_url=reverse_lazy('user-login'))
 def post_detail(request, slug):
     form = CommentForm()
     blog = get_object_or_404(Post, slug=slug)
@@ -51,6 +55,7 @@ def post_detail(request, slug):
     return render(request, 'posts/post-detail.html', context={'blog': blog, 'form': form})
 
 
+@login_required(login_url=reverse_lazy('user-login'))
 def post_update(request, slug):
     blog = get_object_or_404(Post, slug=slug)
     if request.user != blog.user:
@@ -67,6 +72,20 @@ def post_update(request, slug):
     return render(request, 'posts/post-update.html', context)
 
 
+@login_required(login_url=reverse_lazy('user-login'))
+def post_delete(request, slug):
+    blog = get_object_or_404(Post, slug=slug)
+    if request.user != blog.user:
+        return HttpResponseForbidden
+    blog.delete()
+    msg = 'Tebrikler %s isimli gönderiniz başarı ile silindi.' % (blog.title)
+    messages.success(request, msg, extra_tags='danger')
+
+    return HttpResponseRedirect(reverse('post-list'))
+
+
+@login_required(login_url=reverse_lazy('user-login'))
+@is_post
 def add_comment(request, slug):
     blog = get_object_or_404(Post, slug=slug)
     form = CommentForm(data=request.POST)
